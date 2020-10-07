@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+Body{ 
+    background-color: tomato; font-size: 34px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} 
+    </style>
+    <h2> Delightful Dishes Search</h2>
+</head>
+<img src="_imgmeatballs.jpg">
+<img src="_imglasagna.jpg">
+<img src="_imgeggplant.jpg">
+<img src="_imgpizza.jpg">
+<img src="_imgblog2.jpg">
+<img src="_imgchickenandwaffles.jpg">
+<img src="_imgsuasage.jpg">
+<img src="_imgoysters.jpg">
+<img src="_imgbeefpasta.jpg">
+<img src="_imgstromboli.jpg">
+<img src="_imgbreakfast.jpg">
+<img src="_imgsandwich.jpg">
+<img src="_imggarliccrabs.jpg">
+<img src="_imgblog.jpg">
+<h3> So many wonderful varieties of the best type of food to try.</h3>
+<h4> These foods are the best in town, and alot have simple recipes that you can even prepare in the comfort of your home.</h4>
+</h3>
+<body>
+<input id="search"
+type="search"/>
+<Button
+id="submit">submit</Button> 
+</body>
+<script>
+/*
+As a user I want to be able to:
+- type in text
+- click submit 
+- view dishes on page
+
+From the technical side:
+- detect when submit clicked
+- grab user input
+- use user input in our api call
+- parse the response
+- display data accordingly
+*/
+$(document).ready(
+    ()=>{
+
+$("#submit").click(()=>{
+let user input = $("search").val()
+alert(userInput)
+})
+$.ajax})
+url:"http://www.developers.giphy.com/?
+apikey=[n8NF4wimelBAeszfef5CE6KA8SI2NZoA]${userInput}
+
+.done((res)=>{
+    let dishes = res.Search;
+    $.each(dishes, (i, e=>{
+    let image = e.Image
+    console.log("Image", image)
+    }) 
+    $("body").append('<img
+    src="${Image}" alt="dish image"/>')
+})
+})
+
+</script>
+</html>
