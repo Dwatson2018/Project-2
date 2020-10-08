@@ -32,17 +32,17 @@ Body{
 <input id="search"
 type="search"/>
 <Button
-id="submit">submit</Button> 
+id="select a dish">select a dish</Button> 
 </body>
 <script>
 /*
 As a user I want to be able to:
 - type in text
-- click submit 
+- click select a dish 
 - view dishes on page
 
 From the technical side:
-- detect when submit clicked
+- detect when select a dish clicked
 - grab user input
 - use user input in our api call
 - parse the response
@@ -51,7 +51,7 @@ From the technical side:
 $(document).ready(
     ()=>{
 
-$("#submit").click(()=>{
+$("#select a dish").click(()=>{
 let user input = $("search").val()
 alert(userInput)
 })
@@ -62,11 +62,11 @@ apikey=[n8NF4wimelBAeszfef5CE6KA8SI2NZoA]${userInput}
 .done((res)=>{
     let dishes = res.Search;
     $.each(dishes, (i, e=>{
-    let image = e.Image
-    console.log("Image", image)
+    let img = e.Img
+    console.log("Img", img)
     }) 
     $("body").append('<img
-    src="${Image}" alt="dish image"/>')
+    src="${Img}" alt="dish img"/>')
 })
 })
 
